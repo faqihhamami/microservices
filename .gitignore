@@ -1,0 +1,13 @@
+/vendor
+/node_modules
+.env
+/storage/*.key
+/storage/logs/*
+/public/storage
+/public/hot
+/public/vendor
+/public/mix-manifest.json
+/public/css/*
+/public/js/*
+.DS_Store
+Thumbs.db
