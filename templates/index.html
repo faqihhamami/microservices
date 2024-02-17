@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Product Information</h1>
+    <div>
+        <h2>Product:</h2>
+        <p><strong>Name:</strong> {{ product['name'] }}</p>
+        <p><strong>Description:</strong> {{ product['description'] }}</p>
+        <p><strong>Price:</strong> ${{ product['price'] }}</p>
+    </div>
+    <div>
+        <h2>Sold Quantity:</h2>
+        <p><strong>Total Quantity Sold:</strong> {{ sold_quantity }}</p>
+    </div>
+    <div>
+        <h2>Reviews:</h2>
+        <ul>
+            {% for review in reviews['reviews'] %}
+                <li>{{ review.review }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

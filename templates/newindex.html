@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Product Information</h1>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{ product['name'] }}</h2>
+                <p class="card-text"><strong>Description:</strong> {{ product['description'] }}</p>
+                <p class="card-text"><strong>Price:</strong> ${{ product['price'] }}</p>
+                <p class="card-text"><strong>Sold:</strong> {{ sold_quantity }} item(s)</p>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h2>Reviews</h2>
+            <ul class="list-group">
+                {% for review in reviews['reviews'] %}
+                    <li class="list-group-item">{{ review['review'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
