@@ -14,13 +14,12 @@
 ## Lumen
 - Run `composer create-project --prefer-dist laravel/lumen app_cart`
 - Buka file routes/web.php dan tambahkan rute-rute yang diperlukan untuk API 
-<blockquote>
-// Route untuk mendapatkan semua produk
-Route::get('/cart', 'CartController@index');
 
-// Route untuk mendapatkan detail produk berdasarkan ID
+> // Route untuk mendapatkan semua produk [space][space]
+Route::get('/cart', 'CartController@index');[space][space]
+
+// Route untuk mendapatkan detail produk berdasarkan ID [space][space]
 Route::get('/cart/quantity/{id}', 'CartController@show');
-</blockquote>
 
 - Buat file CartController.php di `app/Http/Controllers`
 
